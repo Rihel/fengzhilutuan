@@ -1,4 +1,80 @@
 @import "mixin";
-div{
-  display: flex;
+
+@function size($i){
+  @return $i/2+px;
+}
+.wp{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.page{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  position: relative;
+}
+@for $i from 1 through 4{
+  .page#{$i}{
+    background-image: url("../img/page#{$i}-bg.jpg");
+  }
+}
+.gonextpage{
+  width: size(38);
+  height: size(26);
+  background: url("../img/nextpage.png") no-repeat 0 0;
+  position: fixed;
+  z-index: 999;
+  bottom:15px;
+  left:50%;
+  background-size: 100%;
+  margin-left: size(-19);
+  animation: start 1.5s infinite ease-in-out ;
+  &.active{
+    top: 15px;
+    left:50%;
+    animation: start2 1.5s infinite ease-in-out ;
+  }
+}
+.goindex{
+  position: fixed;
+  top: 0;
+  right: 16px;
+  width: size(183);
+  height:size(54);
+  img{
+    @include img;
+  }
+}
+@keyframes start {
+  0%,30% {
+    opacity: 0.2;
+    transform: translate(0,-15px);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(0,0);
+  }
+  100% {
+    opacity: 0.2;
+    transform: translate(0, 5px);
+  }
+}
+@keyframes start2 {
+  0%,30% {
+    opacity: 0.2;
+    transform: translate(0,-15px) rotate(180deg);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(0,0) rotate(180deg);
+  }
+  100% {
+    opacity: 0.2;
+    transform: translate(0, 5px) rotate(180deg);
+  }
 }
