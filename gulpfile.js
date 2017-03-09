@@ -30,7 +30,7 @@ gulp.task('css', () => {
 			   .pipe(gulp.dest(path.root + 'css'))
 			   .pipe(autoprefixer({
 				   browsers: ['last 2 versions', '>1%', 'IOS 7'],
-
+				   remove:false
 
 			   }))
 			   .pipe(gulp.dest(path.root + 'css'))
