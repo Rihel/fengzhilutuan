@@ -41,14 +41,14 @@
     @include pos(34,19);
   }
   .text{
-    width: 90%;
+    width: 164%;
     position: absolute;
-    left: 5%;
-    top:size(383);
+    left: -25%;
+    top:size(300);
     z-index: 1;
   }
   .btn{
-    @include box(333,97);
+    @include box(340,100);
     position: absolute;
     left: 50%;
     margin-left: (-333/4)+px;
@@ -64,27 +64,34 @@
     display: flex;
     justify-content: space-around;
     padding-top: size(15);
+    padding-bottom: size(15);
     li{
       width: 20%;
       display: flex;
       height: 100%;
-      flex-direction: column;
-      justify-content: space-around;
-      .img{
+
+      position: relative;
+      overflow: hidden;
+      img{
         width: 100%;
-        height: 70%;
-        background: url("../img/page1-border.png") no-repeat 0 0;
-        background-size: 100%;
-        padding: 17px;
+
+
+
       }
-      .caption{
-        height: 20%;
+      .status{
+        width: 100%;
+        height: 23px;
         background: red;
-        background: url("../img/user.png") no-repeat;
-        background-size: 28%;
-        line-height: 142%;
-        text-indent: 1.5em;
-        color: #662f71;
+        position: absolute;
+        top: 0;
+        left: 0;
+        line-height:23px;
+        text-align: center;
+        color: #fff;
+        font-size: 12px;
+        transform: rotate(-45deg);
+        left: -27%;
+        top: 7%;
 
       }
     }
@@ -96,7 +103,88 @@
     z-index: 0;
   }
 }
+.page2{
+  .gril{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .text{
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top:size(278*2);
+  }
+  .baoxiang{
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom:size(192*2);
+    padding: 0 15px;
+    li{
+      width: 30%;
+    }
+  }
+  .sec{
+    width: 60%;
+    position: absolute;
+    bottom: size(161*2);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    span{
+      float: left;
+    }
+    a{
+      float: right;
+    }
+  }
+  .btn{
+    position: absolute;
+    width:size(239*2);
+    height:size(102);
+    bottom: size(98*2);
+    left: 50%;
+    margin-left:size(-239);
 
+  }
+  .huodongshuoming{
+    position: absolute;
+    bottom: 40px;
+    left: 10%;
+    width: 80%;
+  }
+}
+.page3{
+  .gril{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .text{
+    position: absolute;
+    width: 55%;
+    top: size(238*2);
+    left: 5%;
+  }
+  .tab{
+    background: url("../img/tab1.png");
+    width: 100%;
+    display: flex;
+    height: 7.3vh;
+    background-size: 100%;
+    position: absolute;
+    bottom: 40%;
+    left: 0;
+    .active{
+      background: url("../img/tab2.png");
+    }
+
+  }
+}
 
 
 
@@ -121,8 +209,8 @@
   position: fixed;
   top: 0;
   right: 16px;
-  width: size(183);
-  height:size(54);
+  width: size(192);
+  height:size(50);
   img{
     @include img;
   }

@@ -201,15 +201,16 @@ $keylist:-webkit-,-moz-,-ms-,-o-,"";
     &.active{
       animation-name: fadeInUp;
     }
-  }@else if $type==scale{
+  }@else if $type==fade{
     opacity: 0;
     &.active{
-
+        animation-name: fade;
     }
   }@else if $type==rotate{
     opacity: 0;
+    transform: rotate(0deg) translateY(100%);
     &.active{
-
+      animation-name: rotate;
     }
   }
 }
@@ -270,8 +271,29 @@ $keylist:-webkit-,-moz-,-ms-,-o-,"";
     transform: none;
   }
 }
+@keyframes fade {
+  from {
+    opacity: 0;
 
+  }
 
+  to {
+    opacity: 1;
+
+  }
+}
+@keyframes rotate {
+  from {
+    opacity: 0;
+    transform: rotate(0deg) translateY(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotate(360deg) translateY(0);
+
+  }
+}
 $sectionBg: #f2f2f2;
 $titleColor:#ef5452;
 $iclssbg:(1:#ef5553, 2:#f3983f, 3:#b082d4, 4:#46a76d, 5:#718cd1, 6:#c27089, 7:#47b2c6,8:#718cd1);
@@ -282,7 +304,8 @@ $animateName:(
         top:top,
         scale:scale,
         bottom:bottom,
-        rotate:rotate
+        rotate:rotate,
+        fade:fade
 );
 
 

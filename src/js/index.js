@@ -4,9 +4,7 @@ $('.wp-inner').fullpage({
 	page: '.page',
 	change: function change(e) {},
 	beforeChange: function beforeChange(e) {
-		setTimeout(function(){
-			$('.page').eq(e.cur).find('.animated').removeClass('active');
-		},800)
+		$('.page').eq(e.cur).find('.animated').removeClass('active');
 	},
 	afterChange: function afterChange(e) {
 		$('.page').eq(e.cur).find('.animated').addClass('active');
