@@ -27,3 +27,22 @@ $('.gonextpage').on('click', function (e) {
 	e.preventDefault();
 	$.fn.fullpage[$(this).data('dir')](true);
 });
+
+$(document).ready(function(){
+	var swiper = new Swiper('.swiper-container', {
+		pagination: '.swiper-pagination',
+		slidesPerView: 3,
+		paginationClickable: true,
+		spaceBetween: 0,
+		freeMode:true,
+		lazyLoading : true,
+	});
+	var wq = new Swiper('.wq', {
+		freeMode:false,
+		lazyLoading : true,
+	});
+	$('.tab li').on('click',function(){
+		$('.views').find('.item').hide();
+		$('.views').find('.item').eq($(this).index()).show();
+	})
+})

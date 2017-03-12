@@ -248,7 +248,7 @@
   width: 164%;
   position: absolute;
   left: -25%;
-  top: 150px;
+  top: 75px;
   z-index: 1; }
 
 .page1 .btn {
@@ -274,7 +274,8 @@
       -ms-flex-pack: distribute;
           justify-content: space-around;
   padding-top: 7.5px;
-  padding-bottom: 7.5px; }
+  padding-bottom: 7.5px;
+  z-index: 999; }
   .page1 .libao li {
     width: 20%;
     display: -webkit-box;
@@ -320,7 +321,7 @@
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  top: 278px; }
+  top: 200px; }
 
 .page2 .baoxiang {
   display: -webkit-box;
@@ -375,20 +376,49 @@
   top: 238px;
   left: 5%; }
 
-.page3 .tab {
-  background: url("../img/tab1.png");
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 7.3vh;
-  background-size: 100%;
+.page3 .luobo1 {
   position: absolute;
-  bottom: 40%;
-  left: 0; }
-  .page3 .tab .active {
-    background: url("../img/tab2.png"); }
+  bottom: 15%;
+  left: 0;
+  width: 100%;
+  height: calc(7.3vh + 185.5px); }
+  .page3 .luobo1 .tab {
+    background: url("../img/tab1.png") no-repeat 0 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 7.3vh;
+    background-size: 100%; }
+    .page3 .luobo1 .tab.done {
+      background: url("../img/tab2.png") no-repeat 0 0;
+      background-size: 100%; }
+    .page3 .luobo1 .tab li {
+      width: 50%;
+      height: 100%; }
+  .page3 .luobo1 .views {
+    height: 195.5px;
+    position: relative;
+    width: 100%; }
+    .page3 .luobo1 .views:before {
+      height: 2px;
+      width: 100%;
+      content: '';
+      background: #c82e4b;
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      z-index: 111; }
+    .page3 .luobo1 .views .item {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none; }
+      .page3 .luobo1 .views .item .swiper-container {
+        height: 195.5px; }
 
 .gonextpage {
   width: 19px;
