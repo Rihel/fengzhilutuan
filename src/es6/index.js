@@ -42,7 +42,80 @@ $(document).ready(function(){
 		lazyLoading : true,
 	});
 	$('.tab li').on('click',function(){
+		let i=$(this).index();
 		$('.views').find('.item').hide();
-		$('.views').find('.item').eq($(this).index()).show();
+		$('.views').find('.item').eq(i).show();
+		if(i===1){
+			$(this).parent().addClass('done');
+		}else {
+			$(this).parent().removeClass('done');
+		}
+	});
+
+
+	let i=0;
+
+	function qiehuan(){
+		$('.imgs').find('img').removeClass('active');
+		$('.imgs').find('img').eq(i).addClass('active');
+	}
+
+
+	$('.prex').click(function(){
+		if(i<=0){
+			i=4;
+			qiehuan();
+		}else {
+			i--;
+			qiehuan();
+		}
+	})
+	$('.next').click(function(){
+		if(i>=4){
+			i=0;
+			qiehuan();
+		}else {
+			i++;
+			qiehuan();
+		}
+	})
+
+
+	$('.libaooff').click(e=>{
+		$('.mark').show();
+		$('.libaobox').show();
+	});
+	$('.libaobox .close').click(e=>{
+		$('.libaobox').hide();
+		$('.mark').hide();
+	});
+
+
+	$('.yuyue').click(e=>{
+		$('.mark').show();
+		$('#yuyuebox').show();
+	})
+	$('#yuyuebox .close').click(e=>{
+		$('#yuyuebox').hide();
+		$('.mark').hide();
+	});
+
+	$('#yuyue').click(function(event){
+		event.preventDefault();
+		$(this).parent().hide();
+		$('#surebox').show();
+	});
+	$('#surebox .close').click(function(){
+		$(this).parent().hide();
+		$('.mark').hide();
+	})
+
+	$('.zhaohuan').click(function(event){
+		$('.zhaohuanbox').show();
+		$('.mark').show();
+	});
+	$('.zhaohuanbox .close').click(function(){
+		$(this).parent().hide();
+		$('.mark').hide();
 	})
 })
