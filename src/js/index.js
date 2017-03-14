@@ -18,7 +18,6 @@ $('.wp-inner').fullpage({
 	},
 	orientationchange: function orientationchange() {}
 });
-$('.page').on('change', function () {});
 
 $('.gonextpage').on('click', function (e) {
 	e.preventDefault();
@@ -26,26 +25,24 @@ $('.gonextpage').on('click', function (e) {
 });
 
 $(document).ready(function () {
-	var swiper = new Swiper('.swiper-container', {
-		pagination: '.swiper-pagination',
-		slidesPerView: 3,
-		paginationClickable: true,
-		spaceBetween: 0,
-		freeMode: true,
-		lazyLoading: true
-	});
-	var wq = new Swiper('.wq', {
-		freeMode: false,
-		lazyLoading: true
-	});
+
 	$('.tab li').on('click', function () {
 		var i = $(this).index();
 		$('.views').find('.item').hide();
 		$('.views').find('.item').eq(i).show();
 		if (i === 1) {
 			$(this).parent().addClass('done');
+			var wq = new Swiper('.wq');
 		} else {
 			$(this).parent().removeClass('done');
+			var swiper = new Swiper('.sz', {
+				pagination: '.swiper-pagination',
+				slidesPerView: 3,
+				paginationClickable: true,
+				spaceBetween: 0,
+				freeMode: true,
+				lazyLoading: true
+			});
 		}
 	});
 
@@ -75,40 +72,37 @@ $(document).ready(function () {
 		}
 	});
 
-	$('.libaooff').click(function (e) {
-		$('.mark').show();
-		$('.libaobox').show();
-	});
-	$('.libaobox .close').click(function (e) {
-		$('.libaobox').hide();
-		$('.mark').hide();
-	});
-
-	$('.yuyue').click(function (e) {
-		$('.mark').show();
+	$('.page1 .btn').click(function () {
 		$('#yuyuebox').show();
+		$('.mark').show();
 	});
-	$('#yuyuebox .close').click(function (e) {
-		$('#yuyuebox').hide();
+
+	$('.close').click(function () {
+		$(this).parent().hide();
 		$('.mark').hide();
 	});
 
-	$('#yuyue').click(function (event) {
-		event.preventDefault();
+	$('#yuyue').click(function () {
 		$(this).parent().hide();
 		$('#surebox').show();
 	});
-	$('#surebox .close').click(function () {
+
+	$('#sureyuyue').click(function () {
 		$(this).parent().hide();
 		$('.mark').hide();
 	});
 
-	$('.zhaohuan').click(function (event) {
-		$('.zhaohuanbox').show();
+	$('.libao li').click(function () {
+		$('#libao').show();
 		$('.mark').show();
 	});
-	$('.zhaohuanbox .close').click(function () {
-		$(this).parent().hide();
-		$('.mark').hide();
+
+	$('.baoxiang li').click(function () {
+		$('#friend').show();
+		$('.mark').show();
+	});
+	$('.page2 .btn').click(function () {
+		$('.zhaohuanbox').show();
+		$('.mark').show();
 	});
 });
