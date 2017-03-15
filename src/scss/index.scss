@@ -9,6 +9,7 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust:none
 }
 @include delay(10);
 .wp{
@@ -40,28 +41,30 @@
     width: size(287);
     height: size(155);
     @include pos(34,19);
+
   }
   .text{
     width: 164%;
-    position: absolute;
-    left: -25%;
-    top:size(150);
-    z-index: 1;
+    margin-left: -25%;
+
   }
   .btn{
     @include box(340,100);
-    position: absolute;
-    left: 50%;
-    margin-left: (-333/4)+px;
+    //position: absolute;
+    //left: 50%;
+    //margin-left: (-333/4)+px;
     bottom:size(100);
+    @include blockCenter;
+    margin-top: size(35);
   }
   .libao{
     background: rgba(255,255,255,.5);
     height:size(250);
     width: 100%;
-    position: absolute;
-    bottom:size(216);
-    left: 0;
+    //position: absolute;
+    //top:60%;
+    //left: 0;
+    margin-top: -22%;
     display: flex;
     justify-content: space-around;
     padding-top: size(15);
@@ -69,9 +72,7 @@
     z-index: 999;
     li{
       width: 20%;
-      display: flex;
       height: 100%;
-
       position: relative;
       overflow: hidden;
       img{
@@ -98,11 +99,14 @@
       }
     }
   }
+  .inners{
+    width: 100%;
+  }
   .renwu{
     position: absolute;
-    top: -108px;
-    left: -310px;
-    z-index: 0;
+    top: -103px;
+    left: -250px;
+
     width: 200%;
   }
 }
@@ -115,52 +119,66 @@
   }
   .text{
     width: 80%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top:size(400);
+    @include blockCenter;
+    //position: absolute;
+    //left: 50%;
+    //top:39%;
+    //transform: translateX(-50%);
+    margin-top:size(444);
+
   }
   .baoxiang{
     display: flex;
     justify-content: space-around;
-    position: absolute;
-    bottom:size(192*2);
+    //position: absolute;
+    //top:61%;
     padding: 0 15px;
+    margin-top:size(52);
+    margin-bottom:size(33);
     li{
       width: 30%;
     }
   }
   .sec{
-    width: 60%;
-    position: absolute;
-    bottom: size(161*2);
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 12px;
-
+    width:50%;
+    //position: absolute;
+    //bottom: size(161*2);
+    //left: 50%;
+    //transform: translateX(-50%);
+    font-size: 8px;
+    @include clearfix;
+    @include blockCenter;
     span{
-      float: left;
+
       color: #a01333;
+      float: left;
+      width:70%;
     }
     a{
       float: right;
+      width:20%;
+      text-align: right;
       color: #a01333;
     }
   }
   .btn{
-    position: absolute;
-    width:size(239*2);
+    //position: absolute;
+    width:size(390);
     height:size(102);
-    bottom: size(98*2);
-    left: 50%;
+    //bottom: size(98*2);
+    //left: 50%;
     margin-left:size(-239);
+    margin-top: size(13);
+    margin-bottom:size(16);
+    @include blockCenter;
 
   }
   .huodongshuoming{
-    position: absolute;
-    bottom: 40px;
-    left: 10%;
+    //position: absolute;
+    //bottom: 40px;
+    //left: 10%;
     width: 80%;
+    @include blockCenter;
   }
 }
 .page3{
@@ -171,27 +189,26 @@
     width: 100%;
   }
   .text{
-    position: absolute;
+
     width: 55%;
-    top: size(238*2);
-    left: 5%;
+    margin-top:size(369);
+    margin-left:10%;
+    margin-bottom: size(18);
   }
   .luobo1{
-    position: absolute;
-    bottom: 15%;
-    left: 0;
+
     width: 100%;
-    height: calc(7.3vh + 185.5px);
+    height: size(473);
     .tab{
       background: url("../img/tab1.png") no-repeat 0 0;
       width: 100%;
       display: flex;
       height: 7.3vh;
-      background-size: 100%;
+      background-size: cover;
 
       &.done{
         background: url("../img/tab2.png") no-repeat 0 0;
-        background-size: 100%;
+        background-size: cover;
       }
       li{
         width: 50%;
@@ -241,11 +258,12 @@
     display: flex;
     width: 100%;
     height: 40vh;
-      margin-top: 50%;
+      margin-top: size(289);
     .control{
       width: 20%;
-      background-position: center;
+      background-position: center 70%;
       background-repeat: no-repeat;
+      background-size: 11%;
       height:100%;
       &.next{
         background-image: url("../img/next.png");
@@ -393,13 +411,17 @@
     text-align: center;
     span{
       color: #ab2326;
+      height: 15px;
+      line-height: 15px;
+      font-size: 10px;
+      display: block;
     }
 
     &:nth-of-type(1){
       margin-bottom:size(23);
     }
     label{
-      width:size(84);
+      width:20%;
       height:size(54);
       line-height: size(54);
       text-align: center;
@@ -409,7 +431,7 @@
       font-size: 12px;
     }
     input[type="text"]{
-      width: size(316);
+      width: 70%;
       height: size(54);
       border:none;
       border-radius: size(5);
@@ -424,8 +446,9 @@
 
       margin-top: size(13);
       input[type="radio"]{
-
-        margin-left: 26%;
+        width: 10px;
+        height: 10px;
+        margin-left: 30%;
 
 
       }
@@ -542,9 +565,9 @@
 .libaobox{
   display: none;
   width:80%;
-  height: 504-12px;
+  height:407px;
 
-  -webkit-overflow-scrolling: touch;
+
 
   @extend .boxs;
   h2{
@@ -552,10 +575,9 @@
     font-size: size(30);
   }
   .inner{
-    overflow-y: scroll;
-    overflow-x: hidden;
+    overflow: hidden;
     width: 100%;
-    height: 100%;
+    height: 100%;}
     .content{
       padding: 46px 16px 0;
 
@@ -595,7 +617,7 @@
           &.done{
             background: #d71d22;
           }
-        }
+
       }
     }
   }
