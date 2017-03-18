@@ -248,7 +248,7 @@
 
 .page1 .text {
   width: 164%;
-  margin-left: -25%; }
+  margin-left: -15%; }
 
 .page1 .btn {
   width: 170px;
@@ -301,7 +301,7 @@
 
 .page1 .renwu {
   position: absolute;
-  top: -103px;
+  top: -22%;
   left: -250px;
   width: 200%; }
 
@@ -375,7 +375,7 @@
 
 .page3 .text {
   width: 55%;
-  margin-top: 184.5px;
+  margin-top: 30vh;
   margin-left: 10%;
   margin-bottom: 9px; }
 
@@ -401,24 +401,14 @@
     height: 195.5px;
     position: relative;
     width: 100%; }
-    .page3 .luobo1 .views:before {
-      height: 2px;
-      width: 100%;
-      content: '';
-      background: #c82e4b;
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      z-index: 111; }
     .page3 .luobo1 .views .item {
       width: 100%;
-      height: 100%;
       position: absolute;
       top: 0;
       left: 0;
-      display: none; }
+      display: none;
+      border-bottom: 2px solid #c82e4b; }
       .page3 .luobo1 .views .item .swiper-container {
-        height: 195.5px;
         width: 100%; }
 
 .page4 .long {
@@ -481,13 +471,13 @@
   left: 50%;
   background-size: 100%;
   margin-left: -9.5px;
-  -webkit-animation: start 1.5s infinite ease-in-out;
-          animation: start 1.5s infinite ease-in-out; }
+  -webkit-animation: start 1.5s infinite linear alternate;
+          animation: start 1.5s infinite linear alternate; }
   .gonextpage.active {
     top: 15px;
     left: 50%;
-    -webkit-animation: start2 1.5s infinite ease-in-out;
-            animation: start2 1.5s infinite ease-in-out; }
+    -webkit-animation: start2 1.5s infinite linear alternate;
+            animation: start2 1.5s infinite linear alternate; }
 
 .goindex {
   position: fixed;
@@ -501,7 +491,7 @@
     display: block; }
 
 @-webkit-keyframes start {
-  0%, 30% {
+  0% {
     opacity: 0.2;
     -webkit-transform: translate(0, -15px);
             transform: translate(0, -15px); }
@@ -515,7 +505,7 @@
             transform: translate(0, 5px); } }
 
 @keyframes start {
-  0%, 30% {
+  0% {
     opacity: 0.2;
     -webkit-transform: translate(0, -15px);
             transform: translate(0, -15px); }
@@ -529,7 +519,8 @@
             transform: translate(0, 5px); } }
 
 @-webkit-keyframes start2 {
-  0%, 30% {
+  0%,
+  30% {
     opacity: 0.2;
     -webkit-transform: translate(0, -15px) rotate(180deg);
             transform: translate(0, -15px) rotate(180deg); }
@@ -543,7 +534,8 @@
             transform: translate(0, 5px) rotate(180deg); } }
 
 @keyframes start2 {
-  0%, 30% {
+  0%,
+  30% {
     opacity: 0.2;
     -webkit-transform: translate(0, -15px) rotate(180deg);
             transform: translate(0, -15px) rotate(180deg); }
@@ -650,10 +642,11 @@
 .zhaohuanbox {
   display: none;
   width: 80%;
-  height: 592px; }
+  padding-bottom: 20px; }
   .zhaohuanbox h2 {
-    margin-top: 17px;
-    margin-bottom: 28px; }
+    margin-top: 8.5px;
+    margin-bottom: 14px;
+    font-size: 14px; }
   .zhaohuanbox .warp .up {
     *zoom: 1; }
     .zhaohuanbox .warp .up:before, .zhaohuanbox .warp .up:after {
@@ -670,13 +663,13 @@
       margin-left: 24px;
       text-align: center;
       line-height: 23px;
-      font-size: 16px;
+      font-size: 11.5px;
       margin-bottom: 15px;
       float: left; }
     .zhaohuanbox .warp .up p {
       width: 70%;
       color: #656565;
-      font-size: 14px;
+      font-size: 7px;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
@@ -685,18 +678,18 @@
       margin-bottom: 20px;
       float: left; }
   .zhaohuanbox .warp h6 {
-    font-size: 18px;
+    font-size: 9px;
     color: #d81e22;
-    margin: 20px 0;
+    margin: 10px 0;
     text-align: center; }
   .zhaohuanbox .warp button {
     background: #d81e22;
     color: #fff;
     text-align: center;
-    width: 172px;
-    height: 31px;
-    line-height: 31px;
-    margin: 0 auto 30px;
+    width: 115px;
+    height: 30px;
+    line-height: 15.5px;
+    margin: 0 auto 15px;
     border: none;
     border-radius: 3px;
     font-weight: bold;
@@ -707,15 +700,17 @@
   .zhaohuanbox .warp:nth-of-type(2) button {
     width: 200px;
     height: 71px;
-    font-size: 26px; }
+    font-size: 13px; }
   .zhaohuanbox .warp img {
     display: block;
-    margin: 0 auto 20px; }
+    margin: 0 auto 20px;
+    width: 70%; }
   .zhaohuanbox .warp .text {
     text-align: center; }
     .zhaohuanbox .warp .text .caption {
       margin-top: 17px;
-      color: #656565; }
+      color: #656565;
+      font-size: 8px; }
       .zhaohuanbox .warp .text .caption span {
         color: #da4a57; }
 
@@ -728,32 +723,54 @@
   top: 0;
   cursor: pointer; }
 
+.guanbi {
+  width: 28px;
+  height: 29px;
+  background: url("../img/close.png") no-repeat 0 0;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 2%;
+  height: 407px;
+  z-index: 9999999;
+  display: none; }
+
 .libaobox {
   display: none;
   width: 80%;
-  height: 407px; }
+  overflow: scroll;
+  padding-bottom: 10vh; }
   .libaobox h2 {
     font-size: 15px; }
-  .libaobox .inner {
-    overflow: hidden;
+  .libaobox .tap {
     width: 100%;
-    height: 100%; }
+    overflow: hidden;
+    height: 65vh; }
+  .libaobox .swiper-container {
+    width: 100%;
+    height: 65vh; }
   .libaobox .content {
-    padding: 46px 16px 0; }
+    padding: 0 16px 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box; }
     .libaobox .content:after, .libaobox .content:before {
       clear: both;
       display: block;
       content: ''; }
-    .libaobox .content li {
-      width: 100%;
-      height: 140px;
+    .libaobox .content .warp {
       background: #c5d5e4;
       border-radius: 3px;
-      margin-bottom: 20px;
       margin-right: 20px;
       position: relative;
-      overflow: hidden;
-      text-align: center; }
+      width: 100%;
+      overflow: hidden; }
+    .libaobox .content li {
+      width: 100%;
+      text-align: center;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      padding: 10px 0; }
       .libaobox .content li img {
         margin-top: 21px;
         width: 100%;
