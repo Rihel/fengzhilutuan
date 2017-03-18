@@ -240,7 +240,7 @@
   background-image: url("../img/page4-bg.jpg"); }
 
 .page1 .logo {
-  width: 143.5px;
+  width: 44vw;
   height: 77.5px;
   position: absolute;
   top: 17px;
@@ -248,7 +248,7 @@
 
 .page1 .text {
   width: 164%;
-  margin-left: -15%; }
+  margin-left: -26%; }
 
 .page1 .btn {
   width: 170px;
@@ -297,12 +297,13 @@
       top: 7%; }
 
 .page1 .inners {
-  width: 100%; }
+  width: 100%;
+  margin-top: 8vh; }
 
 .page1 .renwu {
   position: absolute;
-  top: -22%;
-  left: -250px;
+  top: -18vh;
+  left: -36vh;
   width: 200%; }
 
 .page2 .gril {
@@ -315,7 +316,7 @@
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 222px; }
+  margin-top: 34vh; }
 
 .page2 .baoxiang {
   display: -webkit-box;
@@ -332,7 +333,7 @@
     width: 30%; }
 
 .page2 .sec {
-  width: 50%;
+  width: 61vw;
   font-size: 8px;
   *zoom: 1;
   margin-left: auto;
@@ -613,7 +614,7 @@
       height: 27px;
       border: none;
       border-radius: 2.5px;
-      font-size: 8px;
+      font-size: 10px;
       line-height: 27px;
       text-indent: 1em;
       margin-left: 30px;
